@@ -7,4 +7,5 @@
 
 ## Other resources  
 - Jenny Bryan's **[Happy Git and GitHub for the useR](https://happygitwithr.com)**  
-- Jenny Bryan's **[What They Forgot to Teach You About R](https://rstats.wtf)**  
+- Jenny Bryan's **[What They Forgot to Teach You About R](https://rstats.wtf)**
+- Emil Hvitfeldt's **[interactive discrete color palette picker](https://emilhvitfeldt.github.io/r-color-palettes/discrete.html)**
