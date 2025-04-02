@@ -8,12 +8,19 @@ How to install and run [CellOracle](https://morris-lab.github.io/CellOracle.docu
 
 ## Step 1: download Docker image
 
-I tried installation using conda and pip but kept running into conflicts. Using Singularity to pull the pre-built docker iamge worked best for me.
+I tried installation using conda and pip but kept running into conflicts. Using `singularity` to pull the pre-built docker iamge worked best for me.
+
+Note that `singularity`'s default `--tmpdir` is `/tmp`, which has only 4G of storage on the login nodes. The default cache directory is `/usr/.singularity/cache`, which also has limited storage. Consider changing these paths to somewhere with more space like the lab folder:
+
+```
+export SINGULARITY_TMPDIR=/absolute/path/to/lab/tmp_folder/
+export SINGULARITY_CACHEDIR=/absolute/path/to/lab/cache_folder/
+```
 
 Go to a directory where you want to the container to be downloaded, then run:
 
 ```bash
-singularity pull --tmpdir /tmp ./celloracle.sif docker://kenjikamimoto126/celloracle_ubuntu:0.18.0
+singularity pull ./celloracle.sif docker://kenjikamimoto126/celloracle_ubuntu:0.18.0
 ```
 
 ## Step 2: register a Jupyter kernel
